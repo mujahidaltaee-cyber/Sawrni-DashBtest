@@ -10,7 +10,7 @@ class ProviderDashboardScreen extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        backgroundColor: const Color(SawrniBrand.softBg),
+        backgroundColor: SawrniBrand.softBg,
         body: SafeArea(
           child: ListView(
             padding: const EdgeInsets.all(20),
@@ -55,7 +55,7 @@ class _Hero extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(22),
       decoration: BoxDecoration(
-        color: const Color(SawrniBrand.navy),
+        color: SawrniBrand.navy,
         borderRadius: BorderRadius.circular(30),
       ),
       child: const Column(
@@ -73,7 +73,7 @@ class _Hero extends StatelessWidget {
           Text(
             SawrniBrand.sloganAr,
             style: TextStyle(
-              color: Color(SawrniBrand.gold),
+              color: SawrniBrand.gold,
               fontSize: 18,
               fontWeight: FontWeight.w800,
             ),
@@ -133,9 +133,9 @@ class _MetricCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(value, style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w900, color: Color(SawrniBrand.text))),
+          Text(value, style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w900, color: SawrniBrand.text)),
           const Spacer(),
-          Text(label, style: const TextStyle(fontSize: 14, color: Color(SawrniBrand.muted), fontWeight: FontWeight.w700)),
+          Text(label, style: const TextStyle(fontSize: 14, color: SawrniBrand.muted, fontWeight: FontWeight.w700)),
         ],
       ),
     );
@@ -169,16 +169,16 @@ class _ProviderActionCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: Color(SawrniBrand.text))),
+          Text(title, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: SawrniBrand.text)),
           const SizedBox(height: 8),
-          Text(subtitle, style: const TextStyle(fontSize: 14, height: 1.7, color: Color(SawrniBrand.muted))),
+          Text(subtitle, style: const TextStyle(fontSize: 14, height: 1.7, color: SawrniBrand.muted)),
           const SizedBox(height: 16),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
               onPressed: onTap,
               style: ElevatedButton.styleFrom(
-                backgroundColor: enabled ? const Color(SawrniBrand.purple) : Colors.grey.shade200,
+                backgroundColor: enabled ? SawrniBrand.purple : Colors.grey.shade200,
                 foregroundColor: enabled ? Colors.white : Colors.grey.shade600,
                 padding: const EdgeInsets.symmetric(vertical: 15),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),

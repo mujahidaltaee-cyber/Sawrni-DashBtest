@@ -9,11 +9,11 @@ class CustomerBookingStatusScreen extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        backgroundColor: const Color(SawrniBrand.softBg),
+        backgroundColor: SawrniBrand.softBg,
         appBar: AppBar(
           title: const Text('حجوزاتي'),
-          backgroundColor: const Color(SawrniBrand.softBg),
-          foregroundColor: const Color(SawrniBrand.text),
+          backgroundColor: SawrniBrand.softBg,
+          foregroundColor: SawrniBrand.text,
           elevation: 0,
         ),
         body: ListView(
@@ -29,7 +29,7 @@ class CustomerBookingStatusScreen extends StatelessWidget {
                   SizedBox(height: 10),
                   Text(
                     'عند قبول مزود الخدمة سيظهر للعميل أن الحجز بانتظار دفع العربون. بيانات التواصل الحساسة تبقى محجوبة قبل تأكيد الحجز.',
-                    style: TextStyle(color: Color(SawrniBrand.muted), height: 1.7),
+                    style: TextStyle(color: SawrniBrand.muted, height: 1.7),
                   ),
                 ],
               ),

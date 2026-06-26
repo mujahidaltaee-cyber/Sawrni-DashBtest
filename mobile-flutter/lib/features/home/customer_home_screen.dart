@@ -24,7 +24,7 @@ class CustomerHomeScreen extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(24),
               decoration: BoxDecoration(
-                color: SawrniBrand.midnight,
+                color: SawrniBrand.navy,
                 borderRadius: BorderRadius.circular(30),
               ),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [

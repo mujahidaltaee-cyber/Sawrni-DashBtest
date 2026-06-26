@@ -56,7 +56,7 @@ class _ProviderBookingDetailsScreenState extends State<ProviderBookingDetailsScr
             TextButton(onPressed: () => Navigator.pop(context), child: const Text('إلغاء')),
             ElevatedButton(
               onPressed: () => Navigator.pop(context, controller.text.trim()),
-              style: ElevatedButton.styleFrom(backgroundColor: const Color(SawrniBrand.danger)),
+              style: ElevatedButton.styleFrom(backgroundColor: SawrniBrand.danger),
               child: const Text('رفض'),
             ),
           ],
@@ -82,11 +82,11 @@ class _ProviderBookingDetailsScreenState extends State<ProviderBookingDetailsScr
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        backgroundColor: const Color(SawrniBrand.softBg),
+        backgroundColor: SawrniBrand.softBg,
         appBar: AppBar(
           title: const Text('تفاصيل الحجز'),
-          backgroundColor: const Color(SawrniBrand.softBg),
-          foregroundColor: const Color(SawrniBrand.text),
+          backgroundColor: SawrniBrand.softBg,
+          foregroundColor: SawrniBrand.text,
           elevation: 0,
         ),
         body: FutureBuilder<ProviderBooking>(
@@ -110,9 +110,9 @@ class _ProviderBookingDetailsScreenState extends State<ProviderBookingDetailsScr
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(booking.titleAr, style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w900, color: Color(SawrniBrand.text))),
+                      Text(booking.titleAr, style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w900, color: SawrniBrand.text)),
                       const SizedBox(height: 10),
-                      Text('${booking.reference} · ${booking.statusAr}', style: const TextStyle(color: Color(SawrniBrand.purple), fontWeight: FontWeight.w900)),
+                      Text('${booking.reference} · ${booking.statusAr}', style: const TextStyle(color: SawrniBrand.purple, fontWeight: FontWeight.w900)),
                       const SizedBox(height: 22),
                       _Field(label: 'العميل', value: booking.customerName),
                       _Field(label: 'الهاتف', value: booking.maskedPhone),
@@ -130,7 +130,7 @@ class _ProviderBookingDetailsScreenState extends State<ProviderBookingDetailsScr
                             child: ElevatedButton(
                               onPressed: _busy ? null : _accept,
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(SawrniBrand.success),
+                                backgroundColor: SawrniBrand.success,
                                 padding: const EdgeInsets.symmetric(vertical: 16),
                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
                               ),
@@ -142,7 +142,7 @@ class _ProviderBookingDetailsScreenState extends State<ProviderBookingDetailsScr
                             child: ElevatedButton(
                               onPressed: _busy ? null : _reject,
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(SawrniBrand.danger),
+                                backgroundColor: SawrniBrand.danger,
                                 padding: const EdgeInsets.symmetric(vertical: 16),
                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
                               ),
@@ -175,16 +175,16 @@ class _Field extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 10),
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: const Color(SawrniBrand.softBg),
+        color: SawrniBrand.softBg,
         borderRadius: BorderRadius.circular(18),
         border: Border.all(color: Colors.black.withOpacity(0.05)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(label, style: const TextStyle(color: Color(SawrniBrand.muted), fontSize: 13, fontWeight: FontWeight.w700)),
+          Text(label, style: const TextStyle(color: SawrniBrand.muted, fontSize: 13, fontWeight: FontWeight.w700)),
           const SizedBox(height: 5),
-          Text(value, style: const TextStyle(color: Color(SawrniBrand.text), fontSize: 16, fontWeight: FontWeight.w900)),
+          Text(value, style: const TextStyle(color: SawrniBrand.text, fontSize: 16, fontWeight: FontWeight.w900)),
         ],
       ),
     );

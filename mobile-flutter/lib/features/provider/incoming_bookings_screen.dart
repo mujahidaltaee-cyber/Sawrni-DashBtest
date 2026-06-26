@@ -33,11 +33,11 @@ class _IncomingBookingsScreenState extends State<IncomingBookingsScreen> {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        backgroundColor: const Color(SawrniBrand.softBg),
+        backgroundColor: SawrniBrand.softBg,
         appBar: AppBar(
           title: const Text('طلبات الحجز'),
-          backgroundColor: const Color(SawrniBrand.softBg),
-          foregroundColor: const Color(SawrniBrand.text),
+          backgroundColor: SawrniBrand.softBg,
+          foregroundColor: SawrniBrand.text,
           elevation: 0,
         ),
         body: RefreshIndicator(
@@ -113,12 +113,12 @@ class _BookingCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(booking.titleAr, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: Color(SawrniBrand.text))),
+          Text(booking.titleAr, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: SawrniBrand.text)),
           const SizedBox(height: 8),
           Text('${booking.reference} · ${booking.customerName} · ${booking.maskedPhone}',
-              style: const TextStyle(color: Color(SawrniBrand.muted), fontWeight: FontWeight.w700)),
+              style: const TextStyle(color: SawrniBrand.muted, fontWeight: FontWeight.w700)),
           const SizedBox(height: 10),
-          Text(booking.notes, style: const TextStyle(color: Color(SawrniBrand.muted), height: 1.6)),
+          Text(booking.notes, style: const TextStyle(color: SawrniBrand.muted, height: 1.6)),
           const SizedBox(height: 12),
           Wrap(
             spacing: 8,
@@ -156,10 +156,10 @@ class _Chip extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
       decoration: BoxDecoration(
-        color: const Color(SawrniBrand.purple).withOpacity(0.08),
+        color: SawrniBrand.purple.withOpacity(0.08),
         borderRadius: BorderRadius.circular(999),
       ),
-      child: Text(text, style: const TextStyle(color: Color(SawrniBrand.purple), fontWeight: FontWeight.w800)),
+      child: Text(text, style: const TextStyle(color: SawrniBrand.purple, fontWeight: FontWeight.w800)),
     );
   }
 }
@@ -176,7 +176,7 @@ class _EmptyCard extends StatelessWidget {
         children: [
           Text('لا توجد طلبات حالياً', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900)),
           SizedBox(height: 8),
-          Text('عند وصول طلبات جديدة ستظهر هنا.', style: TextStyle(color: Color(SawrniBrand.muted))),
+          Text('عند وصول طلبات جديدة ستظهر هنا.', style: TextStyle(color: SawrniBrand.muted)),
         ],
       ),
     );
@@ -197,7 +197,7 @@ class _ErrorCard extends StatelessWidget {
         children: [
           const Text('تعذر تحميل الطلبات', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900)),
           const SizedBox(height: 8),
-          Text(message, style: const TextStyle(color: Color(SawrniBrand.muted))),
+          Text(message, style: const TextStyle(color: SawrniBrand.muted)),
           const SizedBox(height: 12),
           ElevatedButton(onPressed: onRetry, child: const Text('إعادة المحاولة')),
         ],

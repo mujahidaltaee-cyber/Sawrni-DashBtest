@@ -17,7 +17,7 @@ class ProviderDetailsScreen extends StatelessWidget {
           children: [
             Container(
               padding: const EdgeInsets.all(24),
-              decoration: BoxDecoration(color: SawrniBrand.midnight, borderRadius: BorderRadius.circular(30)),
+              decoration: BoxDecoration(color: SawrniBrand.navy, borderRadius: BorderRadius.circular(30)),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Text(name, style: const TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.w900)),
                 const SizedBox(height: 8),

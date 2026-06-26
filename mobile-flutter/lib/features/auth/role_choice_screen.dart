@@ -14,7 +14,7 @@ class RoleChoiceScreen extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(26),
               decoration: BoxDecoration(
-                color: SawrniBrand.midnight,
+                color: SawrniBrand.navy,
                 borderRadius: BorderRadius.circular(34),
               ),
               child: const Column(
