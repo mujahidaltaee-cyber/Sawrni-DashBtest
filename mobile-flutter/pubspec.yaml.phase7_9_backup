@@ -1,0 +1,24 @@
+name: sawrni_mobile
+description: Sawrni / صورني iOS and Android mobile application.
+publish_to: 'none'
+version: 0.7.2+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/brand/
+
+# Sawrni Phase 7.4 provider dashboard additions applied.

@@ -1,0 +1,7 @@
+# Add/merge these into mobile-flutter/pubspec.yaml if they are not already present.
+dependencies:
+  http: ^1.2.2
+
+flutter:
+  assets:
+    - assets/brand/

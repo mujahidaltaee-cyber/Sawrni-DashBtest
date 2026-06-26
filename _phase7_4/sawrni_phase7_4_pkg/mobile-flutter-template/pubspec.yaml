@@ -1,0 +1,17 @@
+name: sawrni_mobile
+description: Sawrni mobile app for customers and providers.
+publish_to: "none"
+version: 0.7.4+74
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.2
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/brand/
