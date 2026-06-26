@@ -29,6 +29,13 @@ jobs:
       - name: Check Flutter version
         run: flutter --version
 
+      - name: Ensure Android platform files exist
+        working-directory: mobile-flutter
+        run: |
+          if [ ! -d android ]; then
+            flutter create --platforms=android --org com.sawrni --project-name sawrni .
+          fi
+
       - name: Get Flutter packages
         working-directory: mobile-flutter
         run: flutter pub get
