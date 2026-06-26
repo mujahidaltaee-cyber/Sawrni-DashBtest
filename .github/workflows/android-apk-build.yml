@@ -1,0 +1,50 @@
+name: Build Sawrni Android APK
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "mobile-flutter/**"
+      - ".github/workflows/android-apk-build.yml"
+
+jobs:
+  build-android:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: "zulu"
+          java-version: "17"
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "stable"
+          channel: "stable"
+
+      - name: Check Flutter version
+        run: flutter --version
+
+      - name: Get Flutter packages
+        working-directory: mobile-flutter
+        run: flutter pub get
+
+      - name: Analyze Flutter project
+        working-directory: mobile-flutter
+        run: flutter analyze
+
+      - name: Build debug APK
+        working-directory: mobile-flutter
+        run: flutter build apk --debug
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sawrni-debug-apk
+          path: mobile-flutter/build/app/outputs/flutter-apk/app-debug.apk
+
