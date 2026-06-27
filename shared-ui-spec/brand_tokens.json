@@ -1,0 +1,24 @@
+{
+  "project": "Sawrni / صورني",
+  "slogan_ar": "استوديو كامل بجيبك",
+  "colors": {
+    "navy": "#06162F",
+    "gold": "#D7A63A",
+    "purple": "#492981",
+    "white": "#FFFFFF",
+    "black": "#000000",
+    "neutral_gray": "#6B7280"
+  },
+  "assets": {
+    "square_logo": "assets/brand/logo_square.png",
+    "horizontal_logo": "assets/brand/logo_horizontal.png",
+    "app_icon": "assets/brand/app_icon.png"
+  },
+  "rules": [
+    "Arabic-first RTL must be supported from the beginning.",
+    "Use square navy logo for app icon, splash, and dark surfaces.",
+    "Use horizontal logo on light backgrounds and official documents.",
+    "Use gold for premium, ratings, highlights and luxury accents.",
+    "Use purple for location pin and secondary interactive accents."
+  ]
+}
